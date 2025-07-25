@@ -79,7 +79,7 @@ const randomNumber = (number) => {
 
 const callPlayer2 = () => {
   while (player2 === player1.toUpperCase()) {
-    player2 = players[randomNumber(2)].name.toLocaleUpperCase();
+    player2 = players[randomNumber(5)].name.toLocaleUpperCase();
   }
 };
 
@@ -177,15 +177,15 @@ const rounds = async () => {
         break;
       case 'CURVA':
         await fighting(
-          { point: (players[indexplayer1].speed += die), index: indexplayer1 },
-          { point: (players[indexplayer2].speed += die), index: indexplayer2 },
+          { point: (players[indexplayer1].skill += die), index: indexplayer1 },
+          { point: (players[indexplayer2].skill += die), index: indexplayer2 },
           track
         );
         break;
       case 'CONFRONTO':
         await fighting(
-          { point: (players[indexplayer1].speed += die), index: indexplayer1 },
-          { point: (players[indexplayer2].speed += die), index: indexplayer2 },
+          { point: (players[indexplayer1].power += die), index: indexplayer1 },
+          { point: (players[indexplayer2].power += die), index: indexplayer2 },
           track
         );
         break;
