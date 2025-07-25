@@ -39,6 +39,13 @@ const players = [
     power: 3,
     score: 0,
   },
+  {
+    name: 'DONKEY KONG',
+    speed: 2,
+    skill: 2,
+    power: 5,
+    score: 0,
+  }
 ];
 
 const quality = [
